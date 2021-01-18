@@ -1,0 +1,42 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Geohasher',{
+        category: '',
+        color: '#00FA1F',
+        defaults: {
+            name: {value:""},
+            latitude: {value: 37.8136},
+            longitude : {value: 144.9631},
+            precision : {value: 6}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "white-globe.svg",
+        label: function() {
+            return this.name||"Geohasher";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="Geohasher">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-latitude"><i class="icon-tag"></i> Latitude</label>
+        <input type="number" id="node-input-latitude" placeholder="37.8136">
+    </div>
+    <div class="form-row">
+        <label for="node-input-longitude"><i class="icon-tag"></i> Longitude</label>
+        <input type="number" id="node-input-longitude" placeholder="144.9631">
+    </div>
+    <div class="form-row">
+        <label for="node-input-precision"><i class="icon-tag"></i> Precision</label>
+        <input type="number" id="node-input-precision" placeholder="6">
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="Geohasher">
+    <p>Insert descriptors here</p>
+</script>

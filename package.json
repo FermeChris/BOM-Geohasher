@@ -1,0 +1,19 @@
+{
+  "name": "geohasher",
+  "version": "1.0.0",
+  "description": "Latitude/Longitude to Geohash converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "node-red": {
+    "nodes": {
+      "Geohasher": "nodes/Geohasher.js"
+    }
+  },
+  "author": "Chris Wilson",
+  "license": "GPL",
+  "dependencies": {
+    "node-red": "^1.0.3"
+  }
+}
