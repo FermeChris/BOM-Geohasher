@@ -13,6 +13,8 @@ module.exports = function(RED)
         this.status({fill:"red",shape:"ring",text:"No data received yet"});
         node.on('input', function(msg)
         {
+
+
             hashBase = '0123456789bcdefghjkmnpqrstuvwxyz'; //its the rules
             var lat_interval = [-90, 90];
             var lon_interval = [-180, 180];
@@ -21,6 +23,14 @@ module.exports = function(RED)
             var char = 0;
             var geohash = [];
             var cycle = "longitude";
+
+            if (msg.topic === "coords")
+            {
+                this.latitude = msg.payload.lat;
+                this.longitude = msg.payload.long;
+                this.precision = msg.payload.precision;
+            }
+
             
             //engage loop while hash length is less than the precision
             while (geohash.length < this.precision)
