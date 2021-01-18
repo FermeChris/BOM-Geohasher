@@ -38,5 +38,9 @@
 </script>
 
 <script type="text/x-red" data-help-name="Geohasher">
-    <p>Insert descriptors here</p>
+    <p>Converts a set of latitude/longitude coordinates into the appropriate Geohash.</p>
+
+    <p>If you are not using manual input, please send a payload object containing "lat", "long", and "precision".  The msg.topic must be "coords".</p>
+
+    <p>EXAMPLE GEOHASH USAGE: (For BOM API): https://api.weather.bom.gov.au/v1/locations/<b>geohashgoeshere</b>/forecasts/daily </p>
 </script>
