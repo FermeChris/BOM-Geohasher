@@ -1,5 +1,4 @@
 const path = require('path');
-//const MathHelper = require(path.join(__dirname, '/lib/math.js'));
 
 module.exports = function(RED)
 {
